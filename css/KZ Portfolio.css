@@ -1,0 +1,134 @@
+   @font-face{
+       font-family: 'font';
+       src: url('fonts/orange\ juice\ 2.0.ttf');
+   }   
+   html{
+       background-image: url(https://scx1.b-cdn.net/csz/news/800/2018/milkyway.jpg);
+       background-repeat: no-repeat;
+       background-size: cover;
+       
+   }
+
+   ul{
+    position: absolute;
+    list-style: none;
+    top: -2em;
+    display: flex; /*inline, block, inline-block, none*/
+    flex-direction: column;/*column, row-reverse, column reverse*/
+    flex-wrap: wrap;/*no-wrap, wrap-reverse, wrap*/
+    justify-content: flex-end;/*flex-end, center, space-evenly,space-between, space-around, flex-start*/
+    align-content: flex-start;/*flex-end, center, space-between,flex-start, space-evenly, space-around, stretch*/
+} 
+
+   li{
+    text-align: left;
+    float: left;
+    display: block;
+    margin: .5em;
+    padding: .5em;
+    text-decoration: underline;
+    position: relative;
+    transition-duration: 0.5s; 
+    color: white;
+}
+
+   ul li ul{
+    border-radius: 20px;
+    text-align: left;
+    background: orange;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 1rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 3rem;
+    left:0px;
+    display: none;
+   
+   }
+
+   ul li:hover > ul, 
+   ul li ul:hover{
+       text-align: center;
+       top: 35px;
+       left: 20px;
+       visibility: visible;
+       opacity: 1;
+       display: block;
+
+   }
+
+   ul li ul li{
+       clear: both;
+       width: 75%;
+   }
+
+   .flex1{
+    order: 1;
+    margin: 1.5em;
+    padding: 1.5em;
+    flex: 5 5 1em;/*growth stretch/shrink flex-basis*/
+   } 
+
+   .left > img{
+       position: absolute;
+       top: 5em;
+       left: 2em;
+       height: 15em;
+       width: 35em;
+       border: black 10px solid;
+       filter: contrast(200%);
+   }
+    
+   .left > h1{
+       font-family: 'font';
+       text-align: center;
+       font-size: 500%;
+       position: absolute;
+       top: 2em;
+       left: 8.4em;
+       text-shadow: white 2px 2px 2px, rgb(0, 153, 255) 2px 2px 2px;
+   }
+
+   .right > img{
+       position: absolute;
+       height: 15em;
+       width: 35em;
+       top: 5em;
+       right: 2em;
+       border: black 10px solid;
+       filter: contrast(200%);
+   }
+
+   .logo > img{
+       position: absolute;
+       height: 8em;
+       width: 7em;
+       left: 44em;
+       bottom: 0;
+       -ms-transform: translate(0px, -500px);
+       -webkit-transform: translate(0px, -500px);
+       transform: translate(0px, -500px);
+       transition: 2s;
+   }
+
+   .shipleft > img{
+       height: 12em;
+       width: 12em;
+       position: absolute;
+       right: -200px;
+       top: 22em;
+       -ms-transform: translate(-1500px, 0px);
+       -webkit-transform: translate(-1500px, 0px);
+       transform: translate(-1500px, 0px);
+       transition: 2s;
+   }
+
+   .gif > img{
+      width: 80em;
+      height: 90em;
+      -webkit-transform: rotateZ(3600000deg);
+      transform: rotateZ(3600000deg);
+      transition: 300000s;
+   }
+   
